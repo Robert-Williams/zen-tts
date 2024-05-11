@@ -1,0 +1,11 @@
+version: '1'
+services:
+  owncloud:
+    image: tts-server
+    container_name: zen-tts
+    restart: always
+    ports:
+      - 9600:9600
+    volumes:
+      - ./voices:/app/voices
+      - ./public:/app/public
